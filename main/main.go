@@ -12,8 +12,6 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-var TEST_MODE = true
-
 func (s *APIClientStruct) Connection() error {
 	var err error
 	var response *http.Response
