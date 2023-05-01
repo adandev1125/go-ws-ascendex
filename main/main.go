@@ -35,7 +35,7 @@ func (s *APIClientStruct) Connection() error {
 
 func (s *APIClientStruct) SubscribeToChannel(symbol string) error {
 	if s.dialer == nil || s.conn == nil {
-		log.Fatal("subscribe with nil dialer or connection")
+		return fmt.Errorf("subscribe with nil dialer or connection")
 	}
 
 	var token string
